@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class CafeView {
     public JFrame frame;
-    public JButton addDrinksButton, addDessertsButton, findItemButton, displayAllButton;
+    public JButton addDrinksButton, addDessertsButton, addCakeButton, addCookiesButton, addSandwichButton, addCoffeeButton, findItemButton, displayAllButton;
     public JTextArea displayArea;
 
     public CafeView() {
@@ -20,7 +20,7 @@ public class CafeView {
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new BorderLayout());
         topPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        topPanel.setBackground(new Color(255, 240, 200));  // Light cafe color
+        topPanel.setBackground(new Color(255, 240, 200));  
 
        
         JLabel titleLabel = new JLabel(" DANDANA Cafe Inventory ☕", SwingConstants.CENTER);
@@ -47,13 +47,21 @@ public class CafeView {
         buttonPanel.setBorder(BorderFactory.createTitledBorder("Menu Options"));
         buttonPanel.setBackground(new Color(240, 250, 255));
 
-        addDrinksButton = new JButton("Available Drinks");
+        addDrinksButton = new JButton("Available Cold Drinks");
         addDessertsButton = new JButton("Available Desserts");
+        addCakeButton = new JButton("Available Cakes");
+        addCookiesButton = new JButton("Available Cookies");
+        addCoffeeButton = new JButton("Available Coffee");
+        addSandwichButton = new JButton("Available Sandwiches");
         findItemButton = new JButton("Find Item");
         displayAllButton = new JButton("Display Full Inventory");
 
         buttonPanel.add(addDrinksButton);
         buttonPanel.add(addDessertsButton);
+        buttonPanel.add(addCakeButton);
+        buttonPanel.add(addCookiesButton);
+         buttonPanel.add(addCoffeeButton);
+         buttonPanel.add(addSandwichButton);
         buttonPanel.add(findItemButton);
         buttonPanel.add(displayAllButton);
 
@@ -64,7 +72,7 @@ public class CafeView {
         displayArea.setFont(new Font("Consolas", Font.PLAIN, 14));
 
         JScrollPane scrollPane = new JScrollPane(displayArea);
-        scrollPane.setBorder(BorderFactory.createTitledBorder("Output Console"));
+        scrollPane.setBorder(BorderFactory.createTitledBorder("List Of Items"));
 
         
         frame.add(topPanel, BorderLayout.NORTH);

@@ -1,9 +1,9 @@
 package model;
 
-public class Desserts extends MenuItem {
+public class Cake extends MenuItem {
     private boolean isCustom;
 
-    public Desserts(String name, double price, boolean isCustom) {
+    public Cake(String name, double price, boolean isCustom) {
         super(name, price);
         this.isCustom = isCustom;
     }
