@@ -19,9 +19,9 @@ public class CafeController {
     private void initController() {
         view.addDrinksButton.addActionListener(e -> addDrinks());
         view.addDessertsButton.addActionListener(e -> addDessert());
-         view.addCakeButton.addActionListener(e -> addCake());
+        
           view.addCookiesButton.addActionListener(e -> addCookies());
-        view.addCoffeeButton.addActionListener(e -> addCoffee());
+        
         view.addSandwichButton.addActionListener(e -> addSandwich());
         view.findItemButton.addActionListener(e -> findItem());
         view.displayAllButton.addActionListener(e -> displayAll());
@@ -39,18 +39,7 @@ public class CafeController {
         menu.addItem(new Drinks(name, price, isHot));
         JOptionPane.showMessageDialog(view.frame, "Drink added successfully!");
     }
-    private void addCoffee() {
-        String name = JOptionPane.showInputDialog(view.frame, "Enter coffee type");
-        if (name == null || name.isEmpty()) return;
-        String priceInput = JOptionPane.showInputDialog(view.frame, "Enter coffee price:");
-        if (priceInput == null || priceInput.isEmpty()) return;
-        double price = Double.parseDouble(priceInput);
-        int isHotOption = JOptionPane.showConfirmDialog(view.frame, "Is the coffee hot?", "Hot Coffee", JOptionPane.YES_NO_OPTION);
-        boolean isHot = isHotOption == JOptionPane.YES_OPTION;
-
-        menu.addItem(new Coffee(name, price, isHot));
-        JOptionPane.showMessageDialog(view.frame, "Coffee added successfully!");
-    }
+    
 
     private void addDessert() {
         String name = JOptionPane.showInputDialog(view.frame, "Enter dessert name:");
@@ -64,18 +53,7 @@ public class CafeController {
         menu.addItem(new Desserts(name, price, isCustom));
         JOptionPane.showMessageDialog(view.frame, "Dessert added successfully!");
     }
-     private void addCake() {
-        String name = JOptionPane.showInputDialog(view.frame, "Enter cake flavor");
-        if (name == null || name.isEmpty()) return;
-        String priceInput = JOptionPane.showInputDialog(view.frame, "Enter cake price:");
-        if (priceInput == null || priceInput.isEmpty()) return;
-        double price = Double.parseDouble(priceInput);
-        int isCustomOption = JOptionPane.showConfirmDialog(view.frame, "Is the cake custom made?", "Custom Dessert", JOptionPane.YES_NO_OPTION);
-        boolean isCustom = isCustomOption == JOptionPane.YES_OPTION;
-
-        menu.addItem(new Cake(name, price, isCustom));
-        JOptionPane.showMessageDialog(view.frame, "Cake added successfully!");
-    }
+    
 
     private void addCookies() {
         String name = JOptionPane.showInputDialog(view.frame, "Enter cookies type");
@@ -98,7 +76,7 @@ public class CafeController {
         if (name == null || name.isEmpty()) return;
         String priceInput = JOptionPane.showInputDialog(view.frame, "Enter sandwich price:");
         double price = Double.parseDouble(priceInput);
-        int hasSauceOption = JOptionPane.showConfirmDialog(view.frame, "Does it have sauce", "Sauce", JOptionPane.YES_NO_OPTION);
+        int hasSauceOption = JOptionPane.showConfirmDialog(view.frame, "Does it have sauce", " Has Sauce", JOptionPane.YES_NO_OPTION);
         boolean hasSauce = hasSauceOption == JOptionPane.YES_OPTION;
 
         menu.addItem(new Desserts(name, price, hasSauce));

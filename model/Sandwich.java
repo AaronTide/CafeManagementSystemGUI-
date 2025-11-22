@@ -12,6 +12,6 @@ public class Sandwich extends MenuItem {
 
     @Override
     public String toString() {
-        return super.toString() + ", Does it have sauce " + (hasSauce ? "Yes" : "No");
+        return super.toString() + ", Does it have sauce? " + (hasSauce ? "Yes" : "No");
     }
 }
